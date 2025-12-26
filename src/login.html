@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+</head>
+<body>
+
+<h2>Connexion</h2>
+
+<input id="email" type="email" placeholder="Email">
+<input id="password" type="password" placeholder="Mot de passe">
+<button id="loginBtn">Se connecter</button>
+
+<p>Pas de compte ? <a href="register.html">Créer un compte</a></p>
+
+<script type="module">
+import { login } from "./src/auth.js";
+
+document.getElementById("loginBtn").onclick = () => {
+  login(email.value, password.value);
+};
+</script>
+
+</body>
+</html>
