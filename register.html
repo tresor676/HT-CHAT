@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription</title>
+</head>
+<body>
+
+<h2>Inscription</h2>
+
+<input id="username" placeholder="Nom utilisateur">
+<input id="email" type="email" placeholder="Email">
+<input id="password" type="password" placeholder="Mot de passe">
+<button id="registerBtn">Créer le compte</button>
+
+<p>Déjà un compte ? <a href="login.html">Connexion</a></p>
+
+<script type="module">
+import { register } from "./src/auth.js";
+
+document.getElementById("registerBtn").onclick = () => {
+  register(email.value, password.value, username.value);
+};
+</script>
+
+</body>
+</html>
